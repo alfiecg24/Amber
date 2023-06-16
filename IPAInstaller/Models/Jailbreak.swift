@@ -11,3 +11,11 @@ enum JailbreakType {
     case rootful
     case rootless
 }
+
+enum Jailbreaks {
+    case palera1n
+    case bakera1n
+    case dopamine
+    case fugu15
+    case xina
+}

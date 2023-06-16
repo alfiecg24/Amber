@@ -23,6 +23,9 @@
 		31177EC42A3CCA0B000D33E7 /* Jailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EC32A3CCA0B000D33E7 /* Jailbreak.swift */; };
 		31177EC62A3CCB1D000D33E7 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EC52A3CCB1D000D33E7 /* Applications.swift */; };
 		31177EC82A3CCD67000D33E7 /* Filesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EC72A3CCD67000D33E7 /* Filesystem.swift */; };
+		312E3C392A3D03F100706167 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 312E3C382A3D03F100706167 /* Zip */; };
+		312E3C3C2A3D040900706167 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 312E3C3B2A3D040900706167 /* FilePicker */; };
+		312E3C3E2A3D041A00706167 /* URL++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312E3C3D2A3D041A00706167 /* URL++.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,7 @@
 		31177EC32A3CCA0B000D33E7 /* Jailbreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jailbreak.swift; sourceTree = "<group>"; };
 		31177EC52A3CCB1D000D33E7 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
 		31177EC72A3CCD67000D33E7 /* Filesystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filesystem.swift; sourceTree = "<group>"; };
+		312E3C3D2A3D041A00706167 /* URL++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL++.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312E3C3C2A3D040900706167 /* FilePicker in Frameworks */,
+				312E3C392A3D03F100706167 /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +114,7 @@
 				31177EB12A3CC41E000D33E7 /* View++.swift */,
 				31177EB32A3CC42C000D33E7 /* Text++.swift */,
 				31177EB52A3CC443000D33E7 /* Color++.swift */,
+				312E3C3D2A3D041A00706167 /* URL++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,6 +166,10 @@
 			dependencies = (
 			);
 			name = IPAInstaller;
+			packageProductDependencies = (
+				312E3C382A3D03F100706167 /* Zip */,
+				312E3C3B2A3D040900706167 /* FilePicker */,
+			);
 			productName = IPAInstaller;
 			productReference = 31177E9B2A3CC3BB000D33E7 /* IPAInstaller.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +198,10 @@
 				Base,
 			);
 			mainGroup = 31177E922A3CC3BB000D33E7;
+			packageReferences = (
+				312E3C372A3D03F100706167 /* XCRemoteSwiftPackageReference "Zip" */,
+				312E3C3A2A3D040900706167 /* XCRemoteSwiftPackageReference "FilePicker" */,
+			);
 			productRefGroup = 31177E9C2A3CC3BB000D33E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -214,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31177EB42A3CC42C000D33E7 /* Text++.swift in Sources */,
+				312E3C3E2A3D041A00706167 /* URL++.swift in Sources */,
 				31177EB22A3CC41E000D33E7 /* View++.swift in Sources */,
 				31177EBD2A3CC4B8000D33E7 /* SplashScreenView.swift in Sources */,
 				31177EC42A3CCA0B000D33E7 /* Jailbreak.swift in Sources */,
@@ -427,6 +443,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		312E3C372A3D03F100706167 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		312E3C3A2A3D040900706167 /* XCRemoteSwiftPackageReference "FilePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markrenaud/FilePicker/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		312E3C382A3D03F100706167 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 312E3C372A3D03F100706167 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+		312E3C3B2A3D040900706167 /* FilePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 312E3C3A2A3D040900706167 /* XCRemoteSwiftPackageReference "FilePicker" */;
+			productName = FilePicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 31177E932A3CC3BB000D33E7 /* Project object */;
 }

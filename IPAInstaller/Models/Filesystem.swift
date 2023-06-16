@@ -19,9 +19,9 @@ extension FilesystemError: LocalizedError {
         case .notReadable:
             return NSLocalizedString("Could not read contents of file or directory", comment: "Not readable")
         case .notWriteable:
-            return NSLocalizedString("Could not write to file or directory", comment: "Comment")
+            return NSLocalizedString("Could not write to file or directory", comment: "Not writable")
         case .doesNotExist:
-            return NSLocalizedString("Requested file or directory does not exist", comment: "Comment")
+            return NSLocalizedString("Requested file or directory does not exist", comment: "Does not exist")
         }
     }
 }
@@ -31,7 +31,7 @@ func isSandboxed() -> Bool {
 }
 
 func getAppsInstalledWithInstaller() throws -> [String] {
-    let allApps = [String]()
+//    let allApps = [String]()
     if isSandboxed() {
         print("ERROR: We are sandboxed")
         throw FilesystemError.notWriteable
@@ -46,10 +46,10 @@ func getAppsInstalledWithInstaller() throws -> [String] {
         print("ERROR: \(e)")
         throw FilesystemError.notReadable
     }
-    var appsInstalledWithInstaller = [String]()
-    for app in allApps {
-        print(app)
-    }
+    let appsInstalledWithInstaller = [String]()
+//    for app in allApps {
+//        print(app)
+//    }
     
     return appsInstalledWithInstaller
 }
