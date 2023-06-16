@@ -8,17 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		31177E9F2A3CC3BB000D33E7 /* IPAInstallerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177E9E2A3CC3BB000D33E7 /* IPAInstallerApp.swift */; };
-		31177EA12A3CC3BB000D33E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EA02A3CC3BB000D33E7 /* ContentView.swift */; };
+		31177EA12A3CC3BB000D33E7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EA02A3CC3BB000D33E7 /* MainView.swift */; };
 		31177EA32A3CC3BC000D33E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31177EA22A3CC3BC000D33E7 /* Assets.xcassets */; };
 		31177EA62A3CC3BC000D33E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31177EA52A3CC3BC000D33E7 /* Preview Assets.xcassets */; };
+		31177EB02A3CC411000D33E7 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EAF2A3CC411000D33E7 /* ButtonModifier.swift */; };
+		31177EB22A3CC41E000D33E7 /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EB12A3CC41E000D33E7 /* View++.swift */; };
+		31177EB42A3CC42C000D33E7 /* Text++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EB32A3CC42C000D33E7 /* Text++.swift */; };
+		31177EB62A3CC443000D33E7 /* Color++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EB52A3CC443000D33E7 /* Color++.swift */; };
+		31177EB92A3CC48A000D33E7 /* InformationContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EB82A3CC48A000D33E7 /* InformationContainerView.swift */; };
+		31177EBB2A3CC49D000D33E7 /* InformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EBA2A3CC49D000D33E7 /* InformationDetailView.swift */; };
+		31177EBD2A3CC4B8000D33E7 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EBC2A3CC4B8000D33E7 /* SplashScreenView.swift */; };
+		31177EBF2A3CC4D5000D33E7 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EBE2A3CC4D5000D33E7 /* TitleView.swift */; };
+		31177EC22A3CC996000D33E7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EC12A3CC996000D33E7 /* Config.swift */; };
+		31177EC42A3CCA0B000D33E7 /* Jailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EC32A3CCA0B000D33E7 /* Jailbreak.swift */; };
+		31177EC62A3CCB1D000D33E7 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EC52A3CCB1D000D33E7 /* Applications.swift */; };
+		31177EC82A3CCD67000D33E7 /* Filesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EC72A3CCD67000D33E7 /* Filesystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31177E9B2A3CC3BB000D33E7 /* IPAInstaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPAInstaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31177E9E2A3CC3BB000D33E7 /* IPAInstallerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAInstallerApp.swift; sourceTree = "<group>"; };
-		31177EA02A3CC3BB000D33E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		31177EA02A3CC3BB000D33E7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		31177EA22A3CC3BC000D33E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31177EA52A3CC3BC000D33E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		31177EAF2A3CC411000D33E7 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		31177EB12A3CC41E000D33E7 /* View++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View++.swift"; sourceTree = "<group>"; };
+		31177EB32A3CC42C000D33E7 /* Text++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text++.swift"; sourceTree = "<group>"; };
+		31177EB52A3CC443000D33E7 /* Color++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color++.swift"; sourceTree = "<group>"; };
+		31177EB82A3CC48A000D33E7 /* InformationContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationContainerView.swift; sourceTree = "<group>"; };
+		31177EBA2A3CC49D000D33E7 /* InformationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDetailView.swift; sourceTree = "<group>"; };
+		31177EBC2A3CC4B8000D33E7 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		31177EBE2A3CC4D5000D33E7 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		31177EC12A3CC996000D33E7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		31177EC32A3CCA0B000D33E7 /* Jailbreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jailbreak.swift; sourceTree = "<group>"; };
+		31177EC52A3CCB1D000D33E7 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
+		31177EC72A3CCD67000D33E7 /* Filesystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filesystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +75,10 @@
 		31177E9D2A3CC3BB000D33E7 /* IPAInstaller */ = {
 			isa = PBXGroup;
 			children = (
+				31177EAE2A3CC407000D33E7 /* Models */,
+				31177EAD2A3CC3F7000D33E7 /* Extensions */,
+				31177EAC2A3CC3EC000D33E7 /* Views */,
 				31177E9E2A3CC3BB000D33E7 /* IPAInstallerApp.swift */,
-				31177EA02A3CC3BB000D33E7 /* ContentView.swift */,
 				31177EA22A3CC3BC000D33E7 /* Assets.xcassets */,
 				31177EA42A3CC3BC000D33E7 /* Preview Content */,
 			);
@@ -65,6 +91,56 @@
 				31177EA52A3CC3BC000D33E7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		31177EAC2A3CC3EC000D33E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31177EC02A3CC693000D33E7 /* Main */,
+				31177EB72A3CC481000D33E7 /* Splash screen */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31177EAD2A3CC3F7000D33E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				31177EB12A3CC41E000D33E7 /* View++.swift */,
+				31177EB32A3CC42C000D33E7 /* Text++.swift */,
+				31177EB52A3CC443000D33E7 /* Color++.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31177EAE2A3CC407000D33E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31177EAF2A3CC411000D33E7 /* ButtonModifier.swift */,
+				31177EC12A3CC996000D33E7 /* Config.swift */,
+				31177EC32A3CCA0B000D33E7 /* Jailbreak.swift */,
+				31177EC52A3CCB1D000D33E7 /* Applications.swift */,
+				31177EC72A3CCD67000D33E7 /* Filesystem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31177EB72A3CC481000D33E7 /* Splash screen */ = {
+			isa = PBXGroup;
+			children = (
+				31177EB82A3CC48A000D33E7 /* InformationContainerView.swift */,
+				31177EBA2A3CC49D000D33E7 /* InformationDetailView.swift */,
+				31177EBC2A3CC4B8000D33E7 /* SplashScreenView.swift */,
+				31177EBE2A3CC4D5000D33E7 /* TitleView.swift */,
+			);
+			path = "Splash screen";
+			sourceTree = "<group>";
+		};
+		31177EC02A3CC693000D33E7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				31177EA02A3CC3BB000D33E7 /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +213,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31177EA12A3CC3BB000D33E7 /* ContentView.swift in Sources */,
+				31177EB42A3CC42C000D33E7 /* Text++.swift in Sources */,
+				31177EB22A3CC41E000D33E7 /* View++.swift in Sources */,
+				31177EBD2A3CC4B8000D33E7 /* SplashScreenView.swift in Sources */,
+				31177EC42A3CCA0B000D33E7 /* Jailbreak.swift in Sources */,
+				31177EC82A3CCD67000D33E7 /* Filesystem.swift in Sources */,
+				31177EBB2A3CC49D000D33E7 /* InformationDetailView.swift in Sources */,
+				31177EC22A3CC996000D33E7 /* Config.swift in Sources */,
+				31177EB02A3CC411000D33E7 /* ButtonModifier.swift in Sources */,
+				31177EB62A3CC443000D33E7 /* Color++.swift in Sources */,
+				31177EA12A3CC3BB000D33E7 /* MainView.swift in Sources */,
 				31177E9F2A3CC3BB000D33E7 /* IPAInstallerApp.swift in Sources */,
+				31177EC62A3CCB1D000D33E7 /* Applications.swift in Sources */,
+				31177EB92A3CC48A000D33E7 /* InformationContainerView.swift in Sources */,
+				31177EBF2A3CC4D5000D33E7 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
