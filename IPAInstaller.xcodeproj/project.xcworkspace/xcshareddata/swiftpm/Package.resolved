@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "privatekits",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SerenaKit/PrivateKits",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e0c051c1e8a69f4081112b0fa494fcecd5d9728c"
+      }
+    },
+    {
       "identity" : "zip",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/marmelroy/Zip",

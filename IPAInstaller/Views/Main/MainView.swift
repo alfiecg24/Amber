@@ -8,33 +8,41 @@
 import SwiftUI
 import FilePicker
 import UniformTypeIdentifiers
+import ApplicationsWrapper
+
+
+let manager = ApplicationsManager.shared
 
 struct MainView: View {
     @State private var image = UIImage(systemName: "gear")
-    @State private var applications = [Application]()
+    @State private var applications = manager.allApps
     var body: some View {
         NavigationView {
             ZStack {
                 if applications.count > 0 {
                     List {
-                        ForEach(applications, id: \.self) { application in
-                            HStack {
-                                Image(uiImage: application.icon)
-                                    .resizable()
-                                    .frame(width: 64, height: 64)
-                                    .cornerRadius(12)
-                                    .padding(.trailing)
-                                VStack(alignment: .leading) {
-                                    Text(application.name)
-                                        .font(.body)
-                                        .fontWeight(.semibold)
-                                        .fontDesign(.rounded)
-                                    Text(application.bundleID)
-                                        .font(.callout)
-                                        .fontWeight(.regular)
-                                        .fontDesign(.rounded)
+                        ForEach(applications, id: \.self) { app in
+                            NavigationLink(destination: {
+                                ApplicationDetailView(app: app)
+                            }, label: {
+                                HStack {
+                                    Image(uiImage: manager.icon(forApplication: app))
+                                        .resizable()
+                                        .frame(width: 64, height: 64)
+                                        .cornerRadius(12)
+                                        .padding(.trailing)
+                                    VStack(alignment: .leading) {
+                                        Text(app.localizedName())
+                                            .font(.body)
+                                            .fontWeight(.semibold)
+                                            .fontDesign(.rounded)
+                                        Text(app.applicationIdentifier())
+                                            .font(.callout)
+                                            .fontWeight(.regular)
+                                            .fontDesign(.rounded)
+                                    }
                                 }
-                            }
+                            })
                         }
                     }
                 } else {
@@ -67,6 +75,7 @@ struct MainView: View {
                             let newApp = try handleApplicationImport(urls[0])
                             withAnimation(.easeIn) {
                                 applications.append(newApp)
+                                
                             }
                         } catch let e {
                             print("ERROR: \(e.localizedDescription)")
