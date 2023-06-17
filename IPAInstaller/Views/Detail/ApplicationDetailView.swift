@@ -12,7 +12,6 @@ import NSTaskBridge
 struct ApplicationDetailView: View {
     let app: LSApplicationProxy
     let manager = ApplicationsManager.shared
-    @State private var entitlements = [Entitlement]()
     var body: some View {
         VStack(alignment: .center) {
             VStack(alignment: .leading) {
@@ -42,17 +41,22 @@ struct ApplicationDetailView: View {
                         .padding()
                 }
             }
-            ForEach(entitlements) { entitlement in
-                if entitlement.valueType == .string {
-                    Text("\(entitlement.key) - \(entitlement.value as! String)")
+            Button(action: {
+                do {
+                    try manager.openApp(app)
+                } catch let e {
+                    print("ERROR: \(e)")
+                    let generator = UINotificationFeedbackGenerator()
+                    generator.notificationOccurred(.error)
                 }
-            }
+            }, label: {
+                Text("Open \(app.localizedName())")
+                    .customButton()
+            })
+            
             Spacer()
         }
         .padding()
-        .onAppear {
-            entitlements = parseEntitlements(entitlements: app.entitlements)
-        }
     }
 }
 

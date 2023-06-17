@@ -12,6 +12,9 @@ enum EntitlementValueType {
     case int
     case bool
     case stringArray
+    case anyArray
+    case data
+    case dictionary
     case other
 }
 
@@ -35,6 +38,15 @@ struct Entitlement: Hashable, Identifiable {
             self.value = val
         } else if let val = value as? [String] {
             self.valueType = .stringArray
+            self.value = val
+        } else if let val = value as? [Any] {
+            self.valueType = .anyArray
+            self.value = val
+        } else if let val = value as? Data {
+            self.valueType = .data
+            self.value = val
+        } else if let val = value as? [String : Any] {
+            self.valueType = .dictionary
             self.value = val
         } else {
             self.valueType = .other
