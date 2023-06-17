@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ApplicationsWrapper
 
 enum FilesystemError: Error {
     case notReadable
@@ -30,26 +31,25 @@ func isSandboxed() -> Bool {
     !FileManager.default.isWritableFile(atPath: "/var/mobile")
 }
 
-func getAppsInstalledWithInstaller() throws -> [String] {
-//    let allApps = [String]()
-    if isSandboxed() {
-        print("ERROR: We are sandboxed")
-        throw FilesystemError.notWriteable
-    }
-    do {
-        guard FileManager.default.isReadableFile(atPath: "/var/containers") else {
-            print("ERROR: Could not read /var/containers")
-            throw FilesystemError.notReadable
-        }
-        try FileManager.default.contentsOfDirectory(atPath: "/var/containers")
-    } catch let e {
-        print("ERROR: \(e)")
-        throw FilesystemError.notReadable
-    }
-    let appsInstalledWithInstaller = [String]()
-//    for app in allApps {
-//        print(app)
+func getAppsInstalledWithInstaller() throws -> [LSApplicationProxy] {
+    let manager = ApplicationsManager.shared
+    let allApps = manager.allApps
+//    if isSandboxed() {
+//        print("ERROR: We are sandboxed")
+//        throw FilesystemError.notWriteable
 //    }
+    var appsInstalledWithInstaller = [LSApplicationProxy]()
+    for app in allApps {
+        do {
+            for file in try FileManager.default.contentsOfDirectory(atPath: app.bundleURL().deletingLastPathComponent().path()) {
+                if file == ".installed_installer" {
+                    appsInstalledWithInstaller.append(app)
+                }
+            }
+        } catch let e {
+            print("ERROR: \(e)")
+        }
+    }
     
     return appsInstalledWithInstaller
 }

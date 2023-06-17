@@ -16,12 +16,13 @@ let manager = ApplicationsManager.shared
 struct MainView: View {
     @State private var image = UIImage(systemName: "gear")
     @State private var applications = manager.allApps
+    @State private var searchTerm = ""
     var body: some View {
         NavigationView {
             ZStack {
                 if applications.count > 0 {
                     List {
-                        ForEach(applications, id: \.self) { app in
+                        ForEach(searchTerms, id: \.self) { app in
                             NavigationLink(destination: {
                                 ApplicationDetailView(app: app)
                             }, label: {
@@ -45,6 +46,8 @@ struct MainView: View {
                             })
                         }
                     }
+                    // Cannot have because it causes large gap at top of detail view
+//                    .searchable(text: $searchTerm, prompt: "Search by name or bundle ID")
                 } else {
                     VStack {
                         Image(systemName: "square.and.arrow.down")
@@ -67,16 +70,20 @@ struct MainView: View {
                     .padding()
                 }
             }
+            .navigationTitle("All apps")
+            // Cannot have large because it causes large gap at top of detail view
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
                     FilePicker(types: [UTType(filenameExtension: "ipa")!, UTType(filenameExtension: "app")!], allowMultiple: false) { urls in
                         print("Selected \(urls.count) files")
                         do {
-                            let newApp = try handleApplicationImport(urls[0])
-                            withAnimation(.easeIn) {
-                                applications.append(newApp)
-                                
-                            }
+//                            let newApp = try handleApplicationImport(urls[0])
+//                            withAnimation(.easeIn) {
+//                                applications.append(newApp)
+//                                
+//                            }
+                            let _ = try! getAppsInstalledWithInstaller()
                         } catch let e {
                             print("ERROR: \(e.localizedDescription)")
                         }
@@ -86,6 +93,16 @@ struct MainView: View {
                     }
                 }
             }
+            .onAppear {
+                applications.sort(by: { $0.localizedName().lowercased() < $1.localizedName().lowercased() })
+            }
+        }
+    }
+    var searchTerms: [LSApplicationProxy] {
+        if searchTerm.isEmpty {
+            return applications
+        } else {
+            return applications.filter { $0.localizedName().lowercased().contains(searchTerm.lowercased()) || $0.applicationIdentifier().lowercased().contains(searchTerm.lowercased()) }
         }
     }
 }

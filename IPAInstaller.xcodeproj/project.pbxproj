@@ -26,6 +26,7 @@
 		312E3C392A3D03F100706167 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 312E3C382A3D03F100706167 /* Zip */; };
 		312E3C3C2A3D040900706167 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 312E3C3B2A3D040900706167 /* FilePicker */; };
 		312E3C3E2A3D041A00706167 /* URL++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312E3C3D2A3D041A00706167 /* URL++.swift */; };
+		31548EBD2A3E4BDF00A1E018 /* KnownEntitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31548EBC2A3E4BDF00A1E018 /* KnownEntitlements.swift */; };
 		3172F9C52A3DC33500121FA1 /* ApplicationsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 3172F9C42A3DC33500121FA1 /* ApplicationsWrapper */; };
 		3172F9C92A3DC36100121FA1 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3172F9C82A3DC36100121FA1 /* CoreServices.framework */; };
 		3172F9CB2A3DC67600121FA1 /* LSApplicationProxy++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172F9CA2A3DC67600121FA1 /* LSApplicationProxy++.swift */; };
@@ -52,6 +53,7 @@
 		31177EC52A3CCB1D000D33E7 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
 		31177EC72A3CCD67000D33E7 /* Filesystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filesystem.swift; sourceTree = "<group>"; };
 		312E3C3D2A3D041A00706167 /* URL++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL++.swift"; sourceTree = "<group>"; };
+		31548EBC2A3E4BDF00A1E018 /* KnownEntitlements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownEntitlements.swift; sourceTree = "<group>"; };
 		3172F9C62A3DC35700121FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3172F9C82A3DC36100121FA1 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		3172F9CA2A3DC67600121FA1 /* LSApplicationProxy++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LSApplicationProxy++.swift"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		31177E9D2A3CC3BB000D33E7 /* IPAInstaller */ = {
 			isa = PBXGroup;
 			children = (
+				31548EBB2A3E4BD700A1E018 /* Other */,
 				3172F9C62A3DC35700121FA1 /* Info.plist */,
 				31177EAE2A3CC407000D33E7 /* Models */,
 				31177EAD2A3CC3F7000D33E7 /* Extensions */,
@@ -165,6 +168,14 @@
 				31177EA02A3CC3BB000D33E7 /* MainView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		31548EBB2A3E4BD700A1E018 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				31548EBC2A3E4BDF00A1E018 /* KnownEntitlements.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		3172F9C72A3DC36100121FA1 /* Frameworks */ = {
@@ -269,6 +280,7 @@
 				312E3C3E2A3D041A00706167 /* URL++.swift in Sources */,
 				31177EB22A3CC41E000D33E7 /* View++.swift in Sources */,
 				31177EBD2A3CC4B8000D33E7 /* SplashScreenView.swift in Sources */,
+				31548EBD2A3E4BDF00A1E018 /* KnownEntitlements.swift in Sources */,
 				31177EC42A3CCA0B000D33E7 /* Jailbreak.swift in Sources */,
 				31177EC82A3CCD67000D33E7 /* Filesystem.swift in Sources */,
 				31177EBB2A3CC49D000D33E7 /* InformationDetailView.swift in Sources */,
