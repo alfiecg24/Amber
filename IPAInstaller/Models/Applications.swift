@@ -8,6 +8,7 @@
 import Foundation
 import Zip
 import SwiftUI
+import ApplicationsWrapper
 
 enum ApplicationError: Error {
     case incorrectFileType
@@ -80,7 +81,7 @@ func handleApplicationImport(_ path: URL) throws -> Application {
         } catch let e {
             print("ERROR: \(e)")
         }
-        
+
         guard appDirectoryURL.path().hasSuffix(".app") else {
             print("ERROR: Could not find .app directory")
             throw ApplicationError.couldNotFindApp
