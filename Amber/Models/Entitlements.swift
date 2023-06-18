@@ -1,6 +1,6 @@
 //
 //  Entitlements.swift
-//  IPAInstaller
+//  Amber
 //
 //  Created by Alfie on 17/06/2023.
 //
