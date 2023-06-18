@@ -8,8 +8,6 @@
 import SwiftUI
 import ApplicationsWrapper
 
-let splitArrays = ([any View](), [any View]())
-
 struct ApplicationDetailView: View {
     let app: LSApplicationProxy
     let manager = ApplicationsManager.shared
