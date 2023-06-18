@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31177E9F2A3CC3BB000D33E7 /* IPAInstallerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177E9E2A3CC3BB000D33E7 /* IPAInstallerApp.swift */; };
+		31177E9F2A3CC3BB000D33E7 /* AmberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177E9E2A3CC3BB000D33E7 /* AmberApp.swift */; };
 		31177EA12A3CC3BB000D33E7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EA02A3CC3BB000D33E7 /* MainView.swift */; };
 		31177EA32A3CC3BC000D33E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31177EA22A3CC3BC000D33E7 /* Assets.xcassets */; };
 		31177EA62A3CC3BC000D33E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31177EA52A3CC3BC000D33E7 /* Preview Assets.xcassets */; };
@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		31177E9B2A3CC3BB000D33E7 /* Amber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amber.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		31177E9E2A3CC3BB000D33E7 /* IPAInstallerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAInstallerApp.swift; sourceTree = "<group>"; };
+		31177E9E2A3CC3BB000D33E7 /* AmberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberApp.swift; sourceTree = "<group>"; };
 		31177EA02A3CC3BB000D33E7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		31177EA22A3CC3BC000D33E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31177EA52A3CC3BC000D33E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				31177EAE2A3CC407000D33E7 /* Models */,
 				31177EAD2A3CC3F7000D33E7 /* Extensions */,
 				31177EAC2A3CC3EC000D33E7 /* Views */,
-				31177E9E2A3CC3BB000D33E7 /* IPAInstallerApp.swift */,
+				31177E9E2A3CC3BB000D33E7 /* AmberApp.swift */,
 				31177EA22A3CC3BC000D33E7 /* Assets.xcassets */,
 				31177EA42A3CC3BC000D33E7 /* Preview Content */,
 			);
@@ -314,7 +314,7 @@
 				31C8FE532A3F7FD900ACF71B /* EntitlementsFullView.swift in Sources */,
 				3172F9CE2A3DC7F700121FA1 /* ApplicationDetailView.swift in Sources */,
 				31177EA12A3CC3BB000D33E7 /* MainView.swift in Sources */,
-				31177E9F2A3CC3BB000D33E7 /* IPAInstallerApp.swift in Sources */,
+				31177E9F2A3CC3BB000D33E7 /* AmberApp.swift in Sources */,
 				31177EC62A3CCB1D000D33E7 /* Applications.swift in Sources */,
 				31C8FE572A3F810400ACF71B /* Entitlement++.swift in Sources */,
 				31C8FE552A3F809700ACF71B /* EntitlementDetailView.swift in Sources */,
