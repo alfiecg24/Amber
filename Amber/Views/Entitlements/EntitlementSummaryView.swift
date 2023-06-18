@@ -1,6 +1,6 @@
 //
 //  EntitlementSummaryView.swift
-//  IPAInstaller
+//  Amber
 //
 //  Created by Alfie on 18/06/2023.
 //
@@ -11,7 +11,7 @@ import ApplicationsWrapper
 struct EntitlementSummaryView: View {
     var app: LSApplicationProxy
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 15) {
            Text("Entitlements")
                 .font(.title2)
                 .fontWeight(.semibold)

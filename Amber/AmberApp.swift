@@ -11,7 +11,11 @@ import SwiftUI
 struct AmberApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashScreenView()
+            if UserDefaults.standard.bool(forKey: "hasLaunchedBefore") {
+                MainView()
+            } else {
+                SplashScreenView()
+            }
         }
     }
 }
