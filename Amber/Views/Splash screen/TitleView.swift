@@ -10,7 +10,7 @@ import SwiftUI
 struct TitleView: View {
     var body: some View {
         VStack {
-            Image(systemName: "square.and.arrow.down")
+            Image("LogoGreen")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 80, alignment: .center)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310BE0FC2A3F90C900CB0ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310BE0FB2A3F90C900CB0ED3 /* LaunchScreen.storyboard */; };
+		310BE0FE2A3F990500CB0ED3 /* ApplicationDetailSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BE0FD2A3F990500CB0ED3 /* ApplicationDetailSummaryView.swift */; };
 		31177E9F2A3CC3BB000D33E7 /* AmberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177E9E2A3CC3BB000D33E7 /* AmberApp.swift */; };
 		31177EA12A3CC3BB000D33E7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177EA02A3CC3BB000D33E7 /* MainView.swift */; };
 		31177EA32A3CC3BC000D33E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31177EA22A3CC3BC000D33E7 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		310BE0FB2A3F90C900CB0ED3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		310BE0FD2A3F990500CB0ED3 /* ApplicationDetailSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDetailSummaryView.swift; sourceTree = "<group>"; };
 		31177E9B2A3CC3BB000D33E7 /* Amber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31177E9E2A3CC3BB000D33E7 /* AmberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberApp.swift; sourceTree = "<group>"; };
 		31177EA02A3CC3BB000D33E7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310BE0FA2A3F90BD00CB0ED3 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				310BE0FB2A3F90C900CB0ED3 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		31177E922A3CC3BB000D33E7 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 		31177EAC2A3CC3EC000D33E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				310BE0FA2A3F90BD00CB0ED3 /* Launch */,
 				31C8FE4D2A3F1C1000ACF71B /* Entitlements */,
 				3172F9CC2A3DC7EB00121FA1 /* Detail */,
 				31177EC02A3CC693000D33E7 /* Main */,
@@ -203,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				3172F9CD2A3DC7F700121FA1 /* ApplicationDetailView.swift */,
+				310BE0FD2A3F990500CB0ED3 /* ApplicationDetailSummaryView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -285,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310BE0FC2A3F90C900CB0ED3 /* LaunchScreen.storyboard in Resources */,
 				31177EA62A3CC3BC000D33E7 /* Preview Assets.xcassets in Resources */,
 				31177EA32A3CC3BC000D33E7 /* Assets.xcassets in Resources */,
 			);
@@ -306,6 +321,7 @@
 				31177EB22A3CC41E000D33E7 /* View++.swift in Sources */,
 				31177EBD2A3CC4B8000D33E7 /* SplashScreenView.swift in Sources */,
 				31177EC42A3CCA0B000D33E7 /* Jailbreak.swift in Sources */,
+				310BE0FE2A3F990500CB0ED3 /* ApplicationDetailSummaryView.swift in Sources */,
 				31177EC82A3CCD67000D33E7 /* Filesystem.swift in Sources */,
 				31177EBB2A3CC49D000D33E7 /* InformationDetailView.swift in Sources */,
 				31177EC22A3CC996000D33E7 /* Config.swift in Sources */,
@@ -446,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Amber/Preview Content\"";
@@ -457,6 +474,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,6 +488,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -480,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Amber/Preview Content\"";
@@ -491,6 +511,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,6 +525,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

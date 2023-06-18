@@ -1,6 +1,6 @@
 //
 //  MainView.swift
-//  IPAInstaller
+//  Amber
 //
 //  Created by Alfie on 16/06/2023.
 //
@@ -16,6 +16,7 @@ let manager = ApplicationsManager.shared
 struct MainView: View {
     @State private var image = UIImage(systemName: "gear")
     @State private var applications = manager.allApps
+    private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
     @State private var searchTerm = ""
     var body: some View {
         NavigationView {
@@ -47,7 +48,7 @@ struct MainView: View {
                         }
                     }
                     // Cannot have because it causes large gap at top of detail view
-//                    .searchable(text: $searchTerm, prompt: "Search by name or bundle ID")
+                    .searchable(text: $searchTerm, prompt: "Search by name or bundle ID")
                 } else {
                     VStack {
                         Image(systemName: "square.and.arrow.down")
@@ -71,8 +72,8 @@ struct MainView: View {
                 }
             }
             .navigationTitle("All apps")
-            // Cannot have large because it causes large gap at top of detail view
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode((idiom == .pad) ? .large : .inline)
+            // TODO: Figure out how to force .columns on iPad
             .navigationViewStyle(.automatic)
             .toolbar {
                 ToolbarItem {

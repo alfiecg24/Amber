@@ -22,6 +22,7 @@ struct EntitlementDetailView: View {
                 Text("Type")
             })
             Section(content: {
+                Text(entitlement.valueTypeString)
                 if entitlement.valueType == .stringArray || entitlement.valueType == .anyArray {
                     if let values = entitlement.value as? [String] {
                         ForEach(values, id: \.self) { item in

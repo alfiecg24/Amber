@@ -10,11 +10,11 @@ import SwiftUI
 struct InformationContainerView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            InformationDetailView(title: "Install any app", subTitle: "Amber can be used to install any .ipa or .app file to your jailbroken iOS device, regardless of codesigning.", imageName: "square.and.arrow.down.on.square")
+            InformationDetailView(title: "App manager", subTitle: "Amber can be used to manage the apps installed on your device and offers a vast amount of information on each of them.", imageName: "list.bullet.clipboard")
             
-            InformationDetailView(title: "Custom entitlements", subTitle: "Amber allows you use any entitlement that you want, giving apps permissions that they wouldn't normally have.", imageName: "lock.open")
+            InformationDetailView(title: "Installer", subTitle: "Amber allows you to install any .ipa or .app file onto your device with entitlements that may not normally be available.", imageName: "lock.open")
             
-            InformationDetailView(title: "No re-signing", subTitle: "Any apps installed with Amber will remained available to use as long as your device is jailbroken.", imageName: "arrow.triangle.2.circlepath")
+            InformationDetailView(title: "Security", subTitle: "Amber will give you a detailed overview of the permissions that each app has, such as personal data they may be able to access.", imageName: "exclamationmark.triangle")
         }
         .padding(.horizontal)
     }
