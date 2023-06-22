@@ -12,12 +12,13 @@ struct ApplicationDetailView: View {
     let app: LSApplicationProxy
     let manager = ApplicationsManager.shared
     private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
+    @State var isInLandscape = false
     var body: some View {
         ScrollView {
             VStack(alignment: .center, spacing: 20) {
                 VStack(alignment: .leading) {
                     HStack(alignment: .bottom) {
-                        Image(uiImage: manager.icon(forApplication: app))
+                        Image(uiImage: manager.icon(forApplication: app, scale: 2.0))
                             .resizable()
                             .frame(width: 64, height: 64)
                             .cornerRadius(12)
@@ -50,7 +51,7 @@ struct ApplicationDetailView: View {
                     if app.isDeletable {
                         Button(action: {
                             do {
-                                try manager.openApp(app)
+                                try manager.deleteApp(app)
                             } catch let e {
                                 print("ERROR: \(e)")
                                 let generator = UINotificationFeedbackGenerator()
@@ -124,9 +125,12 @@ struct ApplicationDetailView: View {
                         }
                     }
                 } else {
-                    VStack {
-                        EntitlementSummaryView(app: app)
-                        ApplicationDetailSummaryView(app: app)
+                    HStack {
+                        VStack(alignment: .leading, spacing: 30) {
+                            EntitlementSummaryView(app: app)
+                            ApplicationDetailSummaryView(app: app)
+                        }
+                        Spacer()
                     }
                 }
                 
@@ -134,8 +138,8 @@ struct ApplicationDetailView: View {
                 Spacer()
             }
             .padding()
-            .navigationBarHidden(idiom == .pad)
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
