@@ -47,7 +47,6 @@ struct MainView: View {
                             })
                         }
                     }
-                    // Cannot have because it causes large gap at top of detail view
                     .searchable(text: $searchTerm, prompt: "Search by name or bundle ID")
                 } else {
                     VStack {
@@ -72,29 +71,28 @@ struct MainView: View {
                 }
             }
             .navigationTitle("All apps")
-            .navigationBarTitleDisplayMode((idiom == .pad) ? .large : .inline)
-            // TODO: Figure out how to force .columns on iPad
-            .navigationViewStyle(.automatic)
-            .toolbar {
-                ToolbarItem {
-                    FilePicker(types: [UTType(filenameExtension: "ipa")!, UTType(filenameExtension: "app")!], allowMultiple: false) { urls in
-                        print("Selected \(urls.count) files")
-//                        do {
-////                            let newApp = try handleApplicationImport(urls[0])
-////                            withAnimation(.easeIn) {
-////                                applications.append(newApp)
-////
-////                            }
-//                            let _ = try! getAppsInstalledWithAmber()
-//                        } catch let e {
-//                            print("ERROR: \(e.localizedDescription)")
-//                        }
-                    } label: {
-                        Label("Install app", systemImage: "plus.circle")
-                            .foregroundColor(.mainColor)
-                    }
-                }
-            }
+            .navigationViewStyle(.stack)
+            .navigationBarTitleDisplayMode(.inline)
+//            .toolbar {
+//                ToolbarItem {
+//                    FilePicker(types: [UTType(filenameExtension: "ipa")!, UTType(filenameExtension: "app")!], allowMultiple: false) { urls in
+//                        print("Selected \(urls.count) files")
+////                        do {
+//////                            let newApp = try handleApplicationImport(urls[0])
+//////                            withAnimation(.easeIn) {
+//////                                applications.append(newApp)
+//////
+//////                            }
+////                            let _ = try! getAppsInstalledWithAmber()
+////                        } catch let e {
+////                            print("ERROR: \(e.localizedDescription)")
+////                        }
+//                    } label: {
+//                        Label("Install app", systemImage: "plus.circle")
+//                            .foregroundColor(.mainColor)
+//                    }
+//                }
+//            }
             .onAppear {
                 applications.sort(by: { $0.localizedName().lowercased() < $1.localizedName().lowercased() })
             }

@@ -13,8 +13,10 @@ struct AmberApp: App {
         WindowGroup {
             if UserDefaults.standard.bool(forKey: "hasLaunchedBefore") {
                 MainView()
+                    .tint(.mainColor)
             } else {
                 SplashScreenView()
+                    .tint(.mainColor)
             }
         }
     }

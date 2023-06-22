@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EntitlementDetailView: View {
     let entitlement: Entitlement
+    private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
     var body: some View {
         List {
             Section(content: {
@@ -22,7 +23,6 @@ struct EntitlementDetailView: View {
                 Text("Type")
             })
             Section(content: {
-                Text(entitlement.valueTypeString)
                 if entitlement.valueType == .stringArray || entitlement.valueType == .anyArray {
                     if let values = entitlement.value as? [String] {
                         ForEach(values, id: \.self) { item in
@@ -54,5 +54,7 @@ struct EntitlementDetailView: View {
                 Text((entitlement.valueType == .stringArray || entitlement.valueType == .anyArray || entitlement.valueType == .dictionary) ? "Values" : "Value")
             })
         }
+        .navigationTitle(idiom == .pad ? entitlement.key : "Entitlement")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

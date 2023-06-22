@@ -21,6 +21,7 @@ struct EntitlementsFullView: View {
             }
         }
         .navigationViewStyle(.stack)
+        .navigationTitle("Entitlements")
     }
 }
 
