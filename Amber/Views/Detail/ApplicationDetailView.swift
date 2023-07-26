@@ -14,6 +14,7 @@ struct ApplicationDetailView: View {
     private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
     @State var isInLandscape = false
     var body: some View {
+        
         ScrollView {
             VStack(alignment: .center, spacing: 20) {
                 VStack(alignment: .leading) {
